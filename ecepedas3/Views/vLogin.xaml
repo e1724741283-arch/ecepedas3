@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ecepedas3.Views.vLogin"
+             Title="vLogin">
+
+    <!-- Estilos locales: solo aplican en esta vista -->
+    <ContentPage.Resources>
+        <Style x:Key="EstiloLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="TextColor" Value="Aqua" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="EstiloButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Coral" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout
+        Margin="20"
+        Spacing="20"
+        Padding="40">
+        <Label
+            Text="INICIAR SESIÓN"
+            VerticalOptions="Center"
+            FontSize="20"
+            HorizontalOptions="Center"/>
+        <!--<Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2019/03/untitled-2-min-1.png" WidthRequest="300"/>-->
+        <Image Source="uisrael.jpg" WidthRequest="150"/>
+        <Grid RowSpacing="15" ColumnSpacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="USUARIO" Style="{StaticResource EstiloLabel}" FontSize="18" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese su usuario" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="CONTRASEÑA" Style="{StaticResource EstiloLabel}" FontSize="18" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtContrasena" Placeholder="Ingrese la contraseña" IsPassword="True" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Name="btnIniciarSesion" Text="Iniciar Sesión" Style="{StaticResource globalBotones}" Clicked="btnIniciarSesion_Clicked" Grid.Row="2" Grid.Column="0"/>
+            <Button x:Name="btnRegistrar" Text="Registrar Usuario" Style="{StaticResource EstiloButton}" Clicked="btnRegistrar_Clicked" Grid.Row="2" Grid.Column="1"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

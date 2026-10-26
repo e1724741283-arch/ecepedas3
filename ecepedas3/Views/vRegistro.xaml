@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ecepedas3.Views.vRegistro"
+             Title="vRegistro">
+
+    <!-- Estilo implícito: aplica a todos los Entry de esta vista -->
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="Background" Value="BlueViolet" />
+            <Setter Property="TextColor" Value="Yellow" />
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="20">
+        <Label
+            Text="REGISTRO DE USUARIO"
+            FontSize="20"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Entry x:Name="txtUsuarioNuevo" Placeholder="Ingrese su usuario" />
+        <Entry x:Name="txtContrasenaNueva" Placeholder="Contraseña nueva" IsPassword="True" />
+        <Button x:Name="btnGuardar" Text="Guardar Usuario" Clicked="btnGuardar_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>

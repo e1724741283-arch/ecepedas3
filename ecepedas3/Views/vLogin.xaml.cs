@@ -1,22 +1,21 @@
 namespace ecepedas3.Views;
 
-public partial class login : ContentPage
+public partial class vLogin : ContentPage
 {
-	string usuario=" ", contrasena="";
-	public login()
+	string usuario=" ", contrasena=" ";
+	public vLogin()
 	{
 		InitializeComponent();
 	}
 
-	public login(string usuarioNuevo, string contrasenaNueva)
+	public vLogin(string usuarioNuevo, string contrasenaNueva)
 	{
 		InitializeComponent();
 		this.usuario = usuarioNuevo;
 		this.contrasena = contrasenaNueva;
 	}
 
-    [Obsolete]
-    private async void btnIniciarSesion_Clicked(object sender, EventArgs e)
+	private async void btnIniciarSesion_Clicked(object? sender, EventArgs e)
 	{
 		try
 		{
@@ -37,8 +36,8 @@ public partial class login : ContentPage
 		}
 	}
 
-	private async void btnRegister_Clicked(object sender, EventArgs e)
+	private async void btnRegistrar_Clicked(object? sender, EventArgs e)
 	{
-		await Navigation.PushAsync(new registro());
+		await Navigation.PushAsync(new vRegistro());
 	}
 }

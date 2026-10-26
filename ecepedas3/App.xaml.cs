@@ -11,7 +11,7 @@ namespace ecepedas3
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new NavigationPage (new Views.login()));
+            return new Window(new NavigationPage (new Views.vLogin()));
         }
     }
 }
